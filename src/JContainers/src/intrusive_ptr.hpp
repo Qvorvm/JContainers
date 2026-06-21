@@ -16,7 +16,7 @@
 #include <boost/assert.hpp>
 #include <boost/detail/workaround.hpp>
 #include <boost/smart_ptr/detail/sp_convertible.hpp>
-#include <boost/smart_ptr/detail/sp_nullptr_t.hpp>
+// #include <boost/smart_ptr/detail/sp_nullptr_t.hpp>
 #include <boost/smart_ptr/detail/sp_noexcept.hpp>
 
 #include <boost/config/no_tr1/functional.hpp>           // for std::less
@@ -29,6 +29,12 @@
 #endif
 #endif
 
+#include <cstddef>
+namespace boost {
+    namespace detail {
+        using sp_nullptr_t = std::nullptr_t;
+    }
+}
 
 namespace boost
 {
@@ -180,7 +186,7 @@ public:
     }
 
 // implicit conversion to "bool"
-#include <boost/smart_ptr/detail/operator_bool.hpp>
+// #include <boost/smart_ptr/detail/operator_bool.hpp>
 
     void swap(intrusive_ptr_jc & rhs) BOOST_NOEXCEPT
     {

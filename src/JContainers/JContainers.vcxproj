@@ -92,19 +92,19 @@
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <CharacterSet>MultiByte</CharacterSet>
     <WholeProgramOptimization>true</WholeProgramOptimization>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v145</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseGOG|x64'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <CharacterSet>MultiByte</CharacterSet>
     <WholeProgramOptimization>true</WholeProgramOptimization>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v145</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseVR|x64'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <CharacterSet>MultiByte</CharacterSet>
     <WholeProgramOptimization>true</WholeProgramOptimization>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v145</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
@@ -126,19 +126,19 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v145</PlatformToolset>
     <CharacterSet>MultiByte</CharacterSet>
     <WholeProgramOptimization>true</WholeProgramOptimization>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugGOG|x64'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v145</PlatformToolset>
     <CharacterSet>MultiByte</CharacterSet>
     <WholeProgramOptimization>true</WholeProgramOptimization>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugVR|x64'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v145</PlatformToolset>
     <CharacterSet>MultiByte</CharacterSet>
     <WholeProgramOptimization>true</WholeProgramOptimization>
   </PropertyGroup>
@@ -244,7 +244,7 @@
       <Optimization>MinSpace</Optimization>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <AdditionalIncludeDirectories>src;$(SolutionDir)dep\boost;$(SolutionDir)dep\skse;$(SolutionDir)dep\googletest\googletest\googletest\include;$(SolutionDir)dep\jansson\jansson\src;$(SolutionDir)dep\jansson;$(SolutionDir)dep\luajit\luajit-2.0\src;$(ProjectDir)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;WIN32_LEAN_AND_MEAN;BOOST_HAS_HASH;NO_JC_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BOOST_ASIO_USE_TS_EXECUTOR_AS_DEFAULT;_CRT_SECURE_NO_WARNINGS;WIN32_LEAN_AND_MEAN;BOOST_HAS_HASH;NO_JC_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
@@ -254,6 +254,7 @@
       <PrecompiledHeaderFile>jcontainers_pch.h</PrecompiledHeaderFile>
       <ForcedIncludeFiles>jcontainers_pch.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <SDLCheck>false</SDLCheck>
+      <DisableSpecificWarnings>4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <ModuleDefinitionFile>
@@ -277,7 +278,7 @@
       <Optimization>MinSpace</Optimization>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <AdditionalIncludeDirectories>src;$(SolutionDir)dep\boost;$(SolutionDir)dep\skse;$(SolutionDir)dep\googletest\googletest\googletest\include;$(SolutionDir)dep\jansson\jansson\src;$(SolutionDir)dep\jansson;$(SolutionDir)dep\luajit\luajit-2.0\src;$(ProjectDir)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;WIN32_LEAN_AND_MEAN;BOOST_HAS_HASH;NO_JC_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BOOST_ASIO_USE_TS_EXECUTOR_AS_DEFAULT;_CRT_SECURE_NO_WARNINGS;WIN32_LEAN_AND_MEAN;BOOST_HAS_HASH;NO_JC_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
@@ -287,6 +288,7 @@
       <PrecompiledHeaderFile>jcontainers_pch.h</PrecompiledHeaderFile>
       <ForcedIncludeFiles>jcontainers_pch.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <SDLCheck>false</SDLCheck>
+      <DisableSpecificWarnings>4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <ModuleDefinitionFile>
@@ -310,7 +312,7 @@
       <Optimization>MinSpace</Optimization>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <AdditionalIncludeDirectories>src;$(SolutionDir)dep\boost;$(SolutionDir)dep\skse;$(SolutionDir)dep\googletest\googletest\googletest\include;$(SolutionDir)dep\jansson\jansson\src;$(SolutionDir)dep\jansson;$(SolutionDir)dep\luajit\luajit-2.0\src;$(ProjectDir)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;WIN32_LEAN_AND_MEAN;BOOST_HAS_HASH;NO_JC_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BOOST_ASIO_USE_TS_EXECUTOR_AS_DEFAULT;_CRT_SECURE_NO_WARNINGS;WIN32_LEAN_AND_MEAN;BOOST_HAS_HASH;NO_JC_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
@@ -320,6 +322,7 @@
       <PrecompiledHeaderFile>jcontainers_pch.h</PrecompiledHeaderFile>
       <ForcedIncludeFiles>jcontainers_pch.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <SDLCheck>false</SDLCheck>
+      <DisableSpecificWarnings>4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <ModuleDefinitionFile>
@@ -343,7 +346,7 @@
       <Optimization>MinSpace</Optimization>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <AdditionalIncludeDirectories>src;$(SolutionDir)src;$(SolutionDir)dep\skse64;$(SolutionDir)dep\skse64\skse;$(SolutionDir)\dep\skse64\common;$(SolutionDir)dep\boost;$(SolutionDir)dep\googletest\googletest\googletest\include;$(SolutionDir)dep\jansson\jansson\src;$(SolutionDir)dep\jansson;$(SolutionDir)dep\luajit\luajit-2.0\src;$(ProjectDir)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>NOMINMAX;_SILENCE_CXX17_RESULT_OF_DEPRECATION_WARNING;_SILENCE_CXX17_ALLOCATOR_VOID_DEPRECATION_WARNING;_SILENCE_CXX17_OLD_ALLOCATOR_MEMBERS_DEPRECATION_WARNING; _SILENCE_CXX17_CODECVT_HEADER_DEPRECATION_WARNING;GTEST_LANG_CXX11;GTEST_HAS_TR1_TUPLE=0;_CRT_SECURE_NO_WARNINGS;WIN32_LEAN_AND_MEAN;BOOST_HAS_HASH;NO_JC_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BOOST_ASIO_USE_TS_EXECUTOR_AS_DEFAULT;NOMINMAX;_SILENCE_CXX17_RESULT_OF_DEPRECATION_WARNING;_SILENCE_CXX17_ALLOCATOR_VOID_DEPRECATION_WARNING;_SILENCE_CXX17_OLD_ALLOCATOR_MEMBERS_DEPRECATION_WARNING; _SILENCE_CXX17_CODECVT_HEADER_DEPRECATION_WARNING;GTEST_LANG_CXX11;GTEST_HAS_TR1_TUPLE=0;_CRT_SECURE_NO_WARNINGS;WIN32_LEAN_AND_MEAN;BOOST_HAS_HASH;NO_JC_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
@@ -354,6 +357,7 @@
       <ForcedIncludeFiles>jcontainers_pch.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <SDLCheck>false</SDLCheck>
       <LanguageStandard>stdcpp17</LanguageStandard>
+      <DisableSpecificWarnings>4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <ModuleDefinitionFile>
@@ -380,7 +384,7 @@
       <Optimization>MinSpace</Optimization>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <AdditionalIncludeDirectories>src;$(SolutionDir)src;$(SolutionDir)dep\sksegog;$(SolutionDir)dep\sksegog\skse;$(SolutionDir)\dep\sksegog\common;$(SolutionDir)dep\boost;$(SolutionDir)dep\googletest\googletest\googletest\include;$(SolutionDir)dep\jansson\jansson\src;$(SolutionDir)dep\jansson;$(SolutionDir)dep\luajit\luajit-2.0\src;$(ProjectDir)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>NOMINMAX;_SILENCE_CXX17_RESULT_OF_DEPRECATION_WARNING;_SILENCE_CXX17_ALLOCATOR_VOID_DEPRECATION_WARNING;_SILENCE_CXX17_OLD_ALLOCATOR_MEMBERS_DEPRECATION_WARNING; _SILENCE_CXX17_CODECVT_HEADER_DEPRECATION_WARNING;GTEST_LANG_CXX11;GTEST_HAS_TR1_TUPLE=0;_CRT_SECURE_NO_WARNINGS;WIN32_LEAN_AND_MEAN;BOOST_HAS_HASH;NO_JC_DEBUG;JC_SKSE_GOG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BOOST_ASIO_USE_TS_EXECUTOR_AS_DEFAULT;NOMINMAX;_SILENCE_CXX17_RESULT_OF_DEPRECATION_WARNING;_SILENCE_CXX17_ALLOCATOR_VOID_DEPRECATION_WARNING;_SILENCE_CXX17_OLD_ALLOCATOR_MEMBERS_DEPRECATION_WARNING; _SILENCE_CXX17_CODECVT_HEADER_DEPRECATION_WARNING;GTEST_LANG_CXX11;GTEST_HAS_TR1_TUPLE=0;_CRT_SECURE_NO_WARNINGS;WIN32_LEAN_AND_MEAN;BOOST_HAS_HASH;NO_JC_DEBUG;JC_SKSE_GOG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
@@ -391,6 +395,7 @@
       <ForcedIncludeFiles>jcontainers_pch.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <SDLCheck>false</SDLCheck>
       <LanguageStandard>stdcpp17</LanguageStandard>
+      <DisableSpecificWarnings>4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <ModuleDefinitionFile>
@@ -417,7 +422,7 @@
       <Optimization>MinSpace</Optimization>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <AdditionalIncludeDirectories>src;$(SolutionDir)src;$(SolutionDir)dep\sksevr;$(SolutionDir)dep\sksevr\sksevr;$(SolutionDir)dep\boost;$(SolutionDir)dep\googletest\googletest\googletest\include;$(SolutionDir)dep\jansson\jansson\src;$(SolutionDir)dep\jansson;$(SolutionDir)dep\luajit\luajit-2.0\src;$(ProjectDir)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>NOMINMAX;_SILENCE_CXX17_RESULT_OF_DEPRECATION_WARNING;_SILENCE_CXX17_ALLOCATOR_VOID_DEPRECATION_WARNING;_SILENCE_CXX17_OLD_ALLOCATOR_MEMBERS_DEPRECATION_WARNING; _SILENCE_CXX17_CODECVT_HEADER_DEPRECATION_WARNING;GTEST_LANG_CXX11;GTEST_HAS_TR1_TUPLE=0;_CRT_SECURE_NO_WARNINGS;WIN32_LEAN_AND_MEAN;BOOST_HAS_HASH;NO_JC_DEBUG;JC_SKSE_VR;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BOOST_ASIO_USE_TS_EXECUTOR_AS_DEFAULT;NOMINMAX;_SILENCE_CXX17_RESULT_OF_DEPRECATION_WARNING;_SILENCE_CXX17_ALLOCATOR_VOID_DEPRECATION_WARNING;_SILENCE_CXX17_OLD_ALLOCATOR_MEMBERS_DEPRECATION_WARNING; _SILENCE_CXX17_CODECVT_HEADER_DEPRECATION_WARNING;GTEST_LANG_CXX11;GTEST_HAS_TR1_TUPLE=0;_CRT_SECURE_NO_WARNINGS;WIN32_LEAN_AND_MEAN;BOOST_HAS_HASH;NO_JC_DEBUG;JC_SKSE_VR;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
@@ -428,6 +433,7 @@
       <ForcedIncludeFiles>jcontainers_pch.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <SDLCheck>false</SDLCheck>
       <LanguageStandard>stdcpp17</LanguageStandard>
+      <DisableSpecificWarnings>4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <ModuleDefinitionFile>
@@ -456,7 +462,7 @@
     <ClCompile>
       <Optimization>Disabled</Optimization>
       <AdditionalIncludeDirectories>src;$(SolutionDir)dep\boost;$(SolutionDir)dep\skse;$(SolutionDir)dep\googletest\googletest\googletest\include;$(SolutionDir)dep\jansson\jansson\src;$(SolutionDir)dep\jansson;$(SolutionDir)dep\luajit\luajit-2.0\src;$(ProjectDir)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;WIN32_LEAN_AND_MEAN;BOOST_HAS_HASH;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BOOST_ASIO_USE_TS_EXECUTOR_AS_DEFAULT;_CRT_SECURE_NO_WARNINGS;WIN32_LEAN_AND_MEAN;BOOST_HAS_HASH;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
@@ -468,6 +474,7 @@
       <SDLCheck>true</SDLCheck>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <AdditionalOptions> -D_SCL_SECURE_NO_WARNINGS</AdditionalOptions>
+      <DisableSpecificWarnings>4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <ModuleDefinitionFile>
@@ -491,7 +498,7 @@
     <ClCompile>
       <Optimization>Disabled</Optimization>
       <AdditionalIncludeDirectories>src;$(SolutionDir)dep\boost;$(SolutionDir)dep\skse;$(SolutionDir)dep\googletest\googletest\googletest\include;$(SolutionDir)dep\jansson\jansson\src;$(SolutionDir)dep\jansson;$(SolutionDir)dep\luajit\luajit-2.0\src;$(ProjectDir)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;WIN32_LEAN_AND_MEAN;BOOST_HAS_HASH;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BOOST_ASIO_USE_TS_EXECUTOR_AS_DEFAULT;_CRT_SECURE_NO_WARNINGS;WIN32_LEAN_AND_MEAN;BOOST_HAS_HASH;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
@@ -503,6 +510,7 @@
       <SDLCheck>true</SDLCheck>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <AdditionalOptions> -D_SCL_SECURE_NO_WARNINGS</AdditionalOptions>
+      <DisableSpecificWarnings>4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <ModuleDefinitionFile>
@@ -526,7 +534,7 @@
     <ClCompile>
       <Optimization>Disabled</Optimization>
       <AdditionalIncludeDirectories>src;$(SolutionDir)dep\boost;$(SolutionDir)dep\skse;$(SolutionDir)dep\googletest\googletest\googletest\include;$(SolutionDir)dep\jansson\jansson\src;$(SolutionDir)dep\jansson;$(SolutionDir)dep\luajit\luajit-2.0\src;$(ProjectDir)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;WIN32_LEAN_AND_MEAN;BOOST_HAS_HASH;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BOOST_ASIO_USE_TS_EXECUTOR_AS_DEFAULT;_CRT_SECURE_NO_WARNINGS;WIN32_LEAN_AND_MEAN;BOOST_HAS_HASH;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
@@ -538,6 +546,7 @@
       <SDLCheck>true</SDLCheck>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <AdditionalOptions> -D_SCL_SECURE_NO_WARNINGS</AdditionalOptions>
+      <DisableSpecificWarnings>4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <ModuleDefinitionFile>
@@ -561,7 +570,7 @@
     <ClCompile>
       <Optimization>Disabled</Optimization>
       <AdditionalIncludeDirectories>src;$(SolutionDir)src;$(SolutionDir)dep\skse64;$(SolutionDir)dep\boost;$(SolutionDir)dep\skse64\skse;$(SolutionDir)\dep\skse64\common;$(SolutionDir)dep\googletest\googletest\googletest\include;$(SolutionDir)dep\jansson\jansson\src;$(SolutionDir)dep\jansson;$(SolutionDir)dep\luajit\luajit-2.0\src;$(ProjectDir)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>NOMINMAX;_SILENCE_CXX17_RESULT_OF_DEPRECATION_WARNING;_SILENCE_CXX17_ALLOCATOR_VOID_DEPRECATION_WARNING;_SILENCE_CXX17_OLD_ALLOCATOR_MEMBERS_DEPRECATION_WARNING; _SILENCE_CXX17_CODECVT_HEADER_DEPRECATION_WARNING;GTEST_LANG_CXX11;GTEST_HAS_TR1_TUPLE=0;_CRT_SECURE_NO_WARNINGS;WIN32_LEAN_AND_MEAN;BOOST_HAS_HASH;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BOOST_ASIO_USE_TS_EXECUTOR_AS_DEFAULT;NOMINMAX;_SILENCE_CXX17_RESULT_OF_DEPRECATION_WARNING;_SILENCE_CXX17_ALLOCATOR_VOID_DEPRECATION_WARNING;_SILENCE_CXX17_OLD_ALLOCATOR_MEMBERS_DEPRECATION_WARNING;_SILENCE_CXX17_CODECVT_HEADER_DEPRECATION_WARNING;GTEST_LANG_CXX11;GTEST_HAS_TR1_TUPLE=0;_CRT_SECURE_NO_WARNINGS;WIN32_LEAN_AND_MEAN;BOOST_HAS_HASH;BOOST_FILESYSTEM_ALLOW_SYSTEM_API_MISMATCH=2;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
@@ -574,6 +583,7 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <AdditionalOptions> -D_SCL_SECURE_NO_WARNINGS</AdditionalOptions>
       <LanguageStandard>stdcpp17</LanguageStandard>
+      <DisableSpecificWarnings>4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <ModuleDefinitionFile>
@@ -604,7 +614,7 @@
     <ClCompile>
       <Optimization>Disabled</Optimization>
       <AdditionalIncludeDirectories>src;$(SolutionDir)src;$(SolutionDir)dep\sksegog;$(SolutionDir)dep\sksegog\skse;$(SolutionDir)\dep\sksegog\common;$(SolutionDir)dep\boost;$(SolutionDir)dep\googletest\googletest\googletest\include;$(SolutionDir)dep\jansson\jansson\src;$(SolutionDir)dep\jansson;$(SolutionDir)dep\luajit\luajit-2.0\src;$(ProjectDir)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>NOMINMAX;_SILENCE_CXX17_RESULT_OF_DEPRECATION_WARNING;_SILENCE_CXX17_ALLOCATOR_VOID_DEPRECATION_WARNING;_SILENCE_CXX17_OLD_ALLOCATOR_MEMBERS_DEPRECATION_WARNING; _SILENCE_CXX17_CODECVT_HEADER_DEPRECATION_WARNING;GTEST_LANG_CXX11;GTEST_HAS_TR1_TUPLE=0;_CRT_SECURE_NO_WARNINGS;WIN32_LEAN_AND_MEAN;BOOST_HAS_HASH;JC_SKSE_GOG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BOOST_ASIO_USE_TS_EXECUTOR_AS_DEFAULT;NOMINMAX;_SILENCE_CXX17_RESULT_OF_DEPRECATION_WARNING;_SILENCE_CXX17_ALLOCATOR_VOID_DEPRECATION_WARNING;_SILENCE_CXX17_OLD_ALLOCATOR_MEMBERS_DEPRECATION_WARNING; _SILENCE_CXX17_CODECVT_HEADER_DEPRECATION_WARNING;GTEST_LANG_CXX11;GTEST_HAS_TR1_TUPLE=0;_CRT_SECURE_NO_WARNINGS;WIN32_LEAN_AND_MEAN;BOOST_HAS_HASH;JC_SKSE_GOG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
@@ -617,6 +627,7 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <AdditionalOptions> -D_SCL_SECURE_NO_WARNINGS</AdditionalOptions>
       <LanguageStandard>stdcpp17</LanguageStandard>
+      <DisableSpecificWarnings>4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <ModuleDefinitionFile>
@@ -647,7 +658,7 @@
     <ClCompile>
       <Optimization>Disabled</Optimization>
       <AdditionalIncludeDirectories>src;$(SolutionDir)src;$(SolutionDir)dep\sksevr;$(SolutionDir)dep\sksevr\sksevr;$(SolutionDir)dep\boost;$(SolutionDir)dep\googletest\googletest\googletest\include;$(SolutionDir)dep\jansson\jansson\src;$(SolutionDir)dep\jansson;$(SolutionDir)dep\luajit\luajit-2.0\src;$(ProjectDir)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>NOMINMAX;_SILENCE_CXX17_RESULT_OF_DEPRECATION_WARNING;_SILENCE_CXX17_ALLOCATOR_VOID_DEPRECATION_WARNING;_SILENCE_CXX17_OLD_ALLOCATOR_MEMBERS_DEPRECATION_WARNING; _SILENCE_CXX17_CODECVT_HEADER_DEPRECATION_WARNING;GTEST_LANG_CXX11;GTEST_HAS_TR1_TUPLE=0;_CRT_SECURE_NO_WARNINGS;WIN32_LEAN_AND_MEAN;BOOST_HAS_HASH;JC_SKSE_VR;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BOOST_ASIO_USE_TS_EXECUTOR_AS_DEFAULT;NOMINMAX;_SILENCE_CXX17_RESULT_OF_DEPRECATION_WARNING;_SILENCE_CXX17_ALLOCATOR_VOID_DEPRECATION_WARNING;_SILENCE_CXX17_OLD_ALLOCATOR_MEMBERS_DEPRECATION_WARNING; _SILENCE_CXX17_CODECVT_HEADER_DEPRECATION_WARNING;GTEST_LANG_CXX11;GTEST_HAS_TR1_TUPLE=0;_CRT_SECURE_NO_WARNINGS;WIN32_LEAN_AND_MEAN;BOOST_HAS_HASH;JC_SKSE_VR;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
@@ -660,6 +671,7 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <AdditionalOptions> -D_SCL_SECURE_NO_WARNINGS</AdditionalOptions>
       <LanguageStandard>stdcpp17</LanguageStandard>
+      <DisableSpecificWarnings>4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <ModuleDefinitionFile>

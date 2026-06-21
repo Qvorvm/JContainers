@@ -1,0 +1,8 @@
+#pragma once
+#include <unordered_set>
+
+// Forward legacy Microsoft extensions namespace to modern standard library containers
+namespace stdext {
+    template <typename Key, typename Traits = void, typename Allocator = std::allocator<Key>>
+    using hash_set = std::unordered_set<Key, std::hash<Key>, std::equal_to<Key>, Allocator>;
+}

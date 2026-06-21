@@ -6,6 +6,7 @@
 
 #include "boost/filesystem/path.hpp"
 #include "boost/filesystem/operations.hpp"
+#include <boost/filesystem/directory.hpp>
 #include "boost/archive/binary_oarchive.hpp"
 
 #include "jansson.h"
@@ -39,7 +40,7 @@ namespace domain_master {
             if (!exists (dir)) // it will throw below
                 JC_log ("JC Domains folder must exist! (%s)", dir.generic_string ().c_str ());
 
-            for (directory_iterator it (dir), end; it != end; ++it) 
+            for (boost::filesystem::directory_iterator it (dir), end; it != end; ++it)
             {
                 // Looks like the Nexus Vortex Manager adds some "__delete_if_empty" files 
                 // or some backup_vortex suffix and other strange things - this cause issues.
@@ -115,6 +116,7 @@ namespace domain_master {
     }
 
     namespace {
+        auto read_from_stream(master& self, std::istream& stream) -> void;
         template<class T, class D>
         inline std::unique_ptr<T, D> make_unique_ptr(T* data, D destr) {
             return std::unique_ptr<T, D>(data, destr);

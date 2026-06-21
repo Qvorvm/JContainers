@@ -300,6 +300,35 @@ If @addToIndex >= 0 it inserts value at given index. " NEGATIVE_IDX_COMMENT);
         }
         REGISTERF2(eraseIndex, "* index", "Erases the item at the index. "NEGATIVE_IDX_COMMENT);
 
+        template<class T,item_type N>
+        static T pullHead(tes_context& ctx, ref obj, T t = default_value<T>())
+        {
+            JC_LOG_API("%p", (void*)obj);
+
+            SInt32 type = item_type::no_item;
+            doReadOp(obj, 0, [=, &type](uint32_t idx) {
+                type = obj->_array[idx].type();
+                });
+
+            if (type == N) {
+                doReadOp(obj, 0, [=, &t](uint32_t idx) {
+                    t = obj->_array[idx].readAs<T>();
+                    });
+
+                doReadOp(obj, 0, [=](uint32_t idx) {
+                    obj->_array.erase(obj->begin() + idx);
+                    });
+            }
+
+            return t;
+        }
+
+        REGISTERF(ARGS(pullHead<SInt32,item_type::integer>), "pullInt", "* default=0", "Erases and returns the item at the head of the array.");
+        REGISTERF(ARGS(pullHead<Float32,item_type::real>), "pullFlt", "* default=0.0", "");
+        REGISTERF(ARGS(pullHead<skse::string_ref,item_type::string>), "pullStr", "* default=\"\"", "");
+        REGISTERF(ARGS(pullHead<object_base*,item_type::object>), "pullObj", "* default=0", "");
+        REGISTERF(ARGS(pullHead<form_ref,item_type::form>), "pullForm", "* default=None", "");
+
         static void eraseRange(tes_context& ctx, ref obj, SInt32 first, SInt32 last)
         {
             JC_LOG_API ("%p, %d, %d", (void*) obj, first, last);

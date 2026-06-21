@@ -3,11 +3,34 @@
 #include <atomic>
 #include <deque>
 #include <boost\serialization\version.hpp>
-#include <boost\asio\io_service.hpp>
+#include <boost\asio.hpp>
 #include <boost\asio\deadline_timer.hpp>
 #include "common\IThread.h"
 #include "util\util.h"
 #include "util\singleton.h"
+
+// Bridge the 1.67 structural gap for Boost 1.91
+namespace boost {
+    namespace asio {
+        // Create an adapter that mimics the legacy 1.67 layout
+        struct io_context_bridge : public io_context {
+            using io_context::io_context;
+
+            // Natively restore the missing nested 'work' struct 
+            struct work {
+                explicit work(io_context& ctx) : guard_(make_work_guard(ctx)) {}
+                explicit work(io_context_bridge& ctx) : guard_(make_work_guard(ctx)) {}
+
+                void reset() { guard_.reset(); }
+            private:
+                executor_work_guard<io_context::executor_type> guard_;
+            };
+        };
+
+        // Redirect the old service token straight to our legacy layout bridge
+        using io_service = io_context_bridge;
+    }
+}
 
 namespace collections {
 

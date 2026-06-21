@@ -1,0 +1,8 @@
+#pragma once
+#include <unordered_map>
+
+// Forward legacy Microsoft extensions namespace to modern standard library containers
+namespace stdext {
+    template <typename Key, typename T, typename Traits = void, typename Allocator = std::allocator<std::pair<const Key, T>>>
+    using hash_map = std::unordered_map<Key, T, std::hash<Key>, std::equal_to<Key>, Allocator>;
+}

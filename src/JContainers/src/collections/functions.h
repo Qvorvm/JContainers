@@ -16,7 +16,7 @@ namespace collections {
         static maybe_index convertReadIndex(int32_t count, index pyIndex) {
             index index = (pyIndex >= 0 ? pyIndex : (count + pyIndex));
 
-            return maybe_index(count > 0 && index < count,
+            return maybe_index(index >= 0 && index < count,
                 index);
         }
 
@@ -28,7 +28,7 @@ namespace collections {
             auto count = ar->u_count();
             index index = (pyIndex >= 0 ? pyIndex : (count + pyIndex + 1));
 
-            return maybe_index(index <= count,
+            return maybe_index(index >= 0 && index <= count,
                 index);
         }
 
@@ -44,7 +44,7 @@ namespace collections {
             for (size_t i = 0; i < N; ++i) {
                 indexes[i] = (pyIndexes[i] >= 0 ? pyIndexes[i] : (count + pyIndexes[i]));
 
-                if (indexes[i] >= count) {
+                if (indexes[i] < 0 || indexes[i] >= count) {
                     return boost::none;
                 }
             }
